@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-no-methods",
+  "version": "0.0.1",
+  "description": "Disallow using the some methods in your configuration",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "no-methods",
+    "includes",
+    "entries",
+    "isInteger"
+  ],
+  "author": "froguard",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "~3.9.1",
+    "mocha": "^5.2.0",
+    "requireindex": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "license": "MIT"
+}
