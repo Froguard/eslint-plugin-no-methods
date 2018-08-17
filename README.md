@@ -49,9 +49,9 @@ Then configure the rules you want to use under the rules section.
           "error", 
           {
             "methods": [
-              {"name": "otherMethodName0", "ignore": ["ignoreCallerName"], "errMsg": "otherMethodName0 is not supported!"},
-              {"name": "otherMethodName1", "ignore": ["ignoreCallerName"], "errMsg": "otherMethodName1 is not supported!"},
-              {"name": "otherMethodName2", "ignore": ["ignoreCallerName"], "errMsg": "otherMethodName2 is not supported!"}
+              {"name": "method0", "ignore": ["ignoreCallerName"], "errMsg": "method0 is not supported!"},
+              {"name": "method1", "ignore": ["ignoreCallerName"], "errMsg": "method1 is not supported!"},
+              {"name": "method2", "ignore": ["ignoreCallerName"], "errMsg": "method2 is not supported!"}
             ]
           }
         ]
@@ -75,7 +75,8 @@ let a = {
 
 let diyInvoke = (obj, methodName, ctx, ...args) => obj[methodName].apply(ctx, args);
 
-diyInvoke(a, doSth, this, 1, 2, 3); // Correct! Even if u`ve configured 'forbidden a.doSth()' in eslint-plugin-no-methods  
+diyInvoke(a, doSth, this, 1, 2, 3); 
+// Correct! Even if u`ve configured 'forbidden a.doSth()' in eslint-plugin-no-methods  
 ```   
 
 > Created by yeoman tool.
