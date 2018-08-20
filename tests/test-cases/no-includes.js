@@ -24,15 +24,15 @@ module.exports = {
         "func(x);"
     ],
     invalid: [
-        {code: "arr.includes(a);", errors},
-        {code: "arr.includes(a, 4);", errors},
-        {code: "[1, 2, 3, 4].includes(1);", errors},
-        {code: "[1, 2, 3, 4].includes(2, 1);", errors},
-        {code: "str.includes(s);", errors},
-        {code: "str.includes(s, 3);", errors},
-        {code: "'helloworld'.includes('hello');", errors},
-        {code: "'helloworld'.includes('hello', 1);", errors},
-        {code: "this.includes('hello');", errors},
-        {code: "wf.includes('hello');", errors}
+        {code: "arr.includes(a);", options, errors},
+        {code: "arr.includes(a, 4);", options, errors},
+        {code: "[1, 2, 3, 4].includes(1);", options, errors},
+        {code: "[1, 2, 3, 4].includes(2, 1);", options, errors},
+        {code: "str.includes(s);", options, errors},
+        {code: "str.includes(s, 3);", options, errors},
+        {code: "'helloworld'.includes('hello');", options, errors},
+        {code: "'helloworld'.includes('hello', 1);", options, errors},
+        {code: "this.includes('hello');", options, errors},
+        {code: "wf.includes('hello');", options, errors}
     ]
 };

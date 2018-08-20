@@ -40,22 +40,30 @@ Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "no-methods/no-includes": [
-          "error", 
-          {"ignore": ["_", "lodash", "underscore"], "errMsg": "Array|String.includes is not supported!"}
-        ],
-        "no-methods/no-methods": [
-          "error", 
-          {
-            "methods": [
-              {"name": "method0", "ignore": ["ignoreCallerName"], "errMsg": "method0 is not supported!"},
-              {"name": "method1", "ignore": ["ignoreCallerName"], "errMsg": "method1 is not supported!"},
-              {"name": "method2", "ignore": ["ignoreCallerName"], "errMsg": "method2 is not supported!"}
-            ]
-          }
+  "rules": {
+    "no-methods/no-includes": [
+      "error", 
+      {"ignore": ["_", "lodash", "underscore"], "errMsg": "Array|String.includes is not supported!"}
+    ],
+    "no-methods/no-entries": [
+      "error", 
+      {"limit": ["Object"], "errMsg": "Object.entries is not supported!"}
+    ],
+    "no-methods/no-assign": [
+      "error", 
+      {"limit": ["Object"], "errMsg": "Object.assign is not supported!"}
+    ],
+    "no-methods/no-methods": [
+      "error", 
+      {
+        "methods": [
+          {"name": "method0", "ignore": ["ignoreCallerName"], "errMsg": "method0 is not supported!"},
+          {"name": "method1", "ignore": ["ignoreCallerName"], "errMsg": "method1 is not supported!"},
+          {"name": "method2", "limit": ["myObj"], "errMsg": "'myObj.method2' is not supported!"}
         ]
-    }
+      }
+    ]
+  }
 }
 ```
 
@@ -78,5 +86,9 @@ let diyInvoke = (obj, methodName, ctx, ...args) => obj[methodName].apply(ctx, ar
 diyInvoke(a, doSth, this, 1, 2, 3); 
 // Correct! Even if u`ve configured 'forbidden a.doSth()' in eslint-plugin-no-methods  
 ```   
+
+## Build-in rules
+
+See build-in rules in [doc/build-in.md](https://github.com/Froguard/eslint-plugin-no-methods/blob/master/doc/build-in.md)
 
 > Created by yeoman tool.
