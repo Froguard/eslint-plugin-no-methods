@@ -98,6 +98,7 @@ no-values | Object | / | Object.values() isn't supported in this project.
 no-all | Promise | / | Promise.all() isn't supported in this project.
 no-race | Promise | / | Promise.race() isn't supported in this project.
 no-reject | Promise | / | Promise.reject() isn't supported in this project.
+no-resolve | Promise | / | Promise.resolve() isn't supported in this project.
 no-apply | Reflect | / | Reflect.apply() isn't supported in this project.
 no-construct | Reflect | / | Reflect.construct() isn't supported in this project.
 no-deleteProperty | Reflect | / | Reflect.deleteProperty() isn't supported in this project.
