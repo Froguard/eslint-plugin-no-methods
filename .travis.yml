@@ -8,4 +8,7 @@ node_js:
  - '6.9.2'
  - '6.0.0'
 branch: master
-script: npm run test
+script:
+  - npm run test:simple
+  - npm run test
+  - npm run gendoc:buildin

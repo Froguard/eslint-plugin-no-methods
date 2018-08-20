@@ -14,13 +14,16 @@
   "author": "froguard",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "test:simple": "node --harmony ./test.js",
+    "gendoc:buildin": "node --harmony ./doc/gen-build-in-doc.js"
   },
   "dependencies": {
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "~3.9.1",
+    "json2md": "^1.6.1",
     "mocha": "^5.2.0"
   },
   "engines": {
