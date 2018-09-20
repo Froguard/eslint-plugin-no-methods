@@ -8,3 +8,5 @@ webpack.config.js
 develop.md
 .travis.yml
 ./test.js
+.gitattributes
+.gitignore
