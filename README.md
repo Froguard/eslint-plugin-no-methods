@@ -43,7 +43,10 @@ Then configure the rules you want to use under the rules section.
   "rules": {
     "no-methods/no-includes": [
       "error", 
-      {"ignore": ["_", "lodash", "underscore"], "errMsg": "Except for _.includes, Array|String.includes is not supported!"}
+      {
+        "ignore": ["_", "lodash", "underscore"], 
+        "errMsg": "Except for _.includes, Array|String.includes is not supported!"
+      }
     ],
     "no-methods/no-entries": [
       "error", 
@@ -57,9 +60,21 @@ Then configure the rules you want to use under the rules section.
       "error", 
       {
         "methods": [
-          {"name": "method0", "ignore": ["ignoreCallerName"], "errMsg": "Except for ignoreCallerName.method0, method0 is not supported!"},
-          {"name": "method1", "ignore": ["ignoreCallerName"], "errMsg": "Except for ignoreCallerName.method1, method1 is not supported!"},
-          {"name": "method2", "limit": ["myObj"], "errMsg": "Only myObj.method2 is not supported!"}
+          {
+            "name": "method0", 
+            "ignore": ["ignoreCallerName"], 
+            "errMsg": "Except for ignoreCallerName.method0, method0 is not supported!"
+          },
+          {
+            "name": "method1", 
+            "ignore": ["ignoreCallerName"], 
+            "errMsg": "Except for ignoreCallerName.method1, method1 is not supported!"
+          },
+          {
+            "name": "method2", 
+            "limit": ["myObj"], 
+            "errMsg": "Only myObj.method2 is not supported!"
+          }
         ]
       }
     ]
