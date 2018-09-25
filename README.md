@@ -67,9 +67,9 @@ Then configure the rules you want to use under the rules section.
 }
 ```
 
-> `ignore`: none was allowed but someone in ignores   
+> `ignore`: none was allowed but some in ignores   
 
-> `limit`: only some limit was disallowed, and others were allowed
+> `limit`: only some `limits` were disallowed, and others were allowed
 
 > You can use **only one** of `ignore` and `limit` in configuration.
 
