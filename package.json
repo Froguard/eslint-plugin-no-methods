@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-methods",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Disallow using the some methods in your configuration",
   "keywords": [
     "eslint",
@@ -29,5 +29,6 @@
   "engines": {
     "node": ">=7.0.0"
   },
+  "homepage": "https://github.com/Froguard/eslint-plugin-no-methods",
   "license": "MIT"
 }
