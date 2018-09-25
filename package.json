@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-methods",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Disallow using the some methods in your configuration",
   "keywords": [
     "eslint",

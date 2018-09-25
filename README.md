@@ -43,7 +43,7 @@ Then configure the rules you want to use under the rules section.
   "rules": {
     "no-methods/no-includes": [
       "error", 
-      {"ignore": ["_", "lodash", "underscore"], "errMsg": "Array|String.includes is not supported!"}
+      {"ignore": ["_", "lodash", "underscore"], "errMsg": "Except for _.includes, Array|String.includes is not supported!"}
     ],
     "no-methods/no-entries": [
       "error", 
@@ -57,15 +57,21 @@ Then configure the rules you want to use under the rules section.
       "error", 
       {
         "methods": [
-          {"name": "method0", "ignore": ["ignoreCallerName"], "errMsg": "method0 is not supported!"},
-          {"name": "method1", "ignore": ["ignoreCallerName"], "errMsg": "method1 is not supported!"},
-          {"name": "method2", "limit": ["myObj"], "errMsg": "'myObj.method2' is not supported!"}
+          {"name": "method0", "ignore": ["ignoreCallerName"], "errMsg": "Except for ignoreCallerName.method0, method0 is not supported!"},
+          {"name": "method1", "ignore": ["ignoreCallerName"], "errMsg": "Except for ignoreCallerName.method1, method1 is not supported!"},
+          {"name": "method2", "limit": ["myObj"], "errMsg": "Only myObj.method2 is not supported!"}
         ]
       }
     ]
   }
 }
 ```
+
+> `ignore`: none was allowed but someone in ignores   
+
+> `limit`: only some limit was disallowed, and others were allowed
+
+> You can use **only one** of `ignore` and `limit` in configuration.
 
 ## Attention
 
@@ -83,7 +89,7 @@ let a = {
 
 let diyInvoke = (obj, methodName, ctx, ...args) => obj[methodName].apply(ctx, args);
 
-diyInvoke(a, doSth, this, 1, 2, 3); 
+diyInvoke(a, 'doSth', this, 1, 2, 3); 
 // Correct! Even if u`ve configured 'forbidden a.doSth()' in eslint-plugin-no-methods  
 ```   
 
