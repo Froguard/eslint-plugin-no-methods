@@ -88,6 +88,10 @@ Then configure the rules you want to use under the rules section.
 
 > You can use **only one** of `ignore` and `limit` in configuration.
 
+## Build-in rules
+
+See build-in rules in [doc/build-in.md](https://github.com/Froguard/eslint-plugin-no-methods/blob/master/doc/build-in.md)
+
 ## Attention
 
 The function call expression like `methodName.call(ctx, args)`, wasnot resolved in eslint-plugin-no-method.
@@ -107,9 +111,5 @@ let diyInvoke = (obj, methodName, ctx, ...args) => obj[methodName].apply(ctx, ar
 diyInvoke(a, 'doSth', this, 1, 2, 3); 
 // Correct! Even if u`ve configured 'forbidden a.doSth()' in eslint-plugin-no-methods  
 ```   
-
-## Build-in rules
-
-See build-in rules in [doc/build-in.md](https://github.com/Froguard/eslint-plugin-no-methods/blob/master/doc/build-in.md)
 
 > Created by yeoman tool.
