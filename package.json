@@ -14,7 +14,7 @@
   "author": "froguard",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive",
+    "test": "mocha tests --recursive --harmony",
     "test:simple": "node --harmony ./test.js",
     "gendoc:buildin": "node --harmony ./doc/gen-build-in-doc.js"
   },
@@ -27,7 +27,7 @@
     "mocha": "^5.2.0"
   },
   "engines": {
-    "node": ">=7.0.0"
+    "node": ">=8.0.0"
   },
   "homepage": "https://github.com/Froguard/eslint-plugin-no-methods",
   "license": "MIT"
