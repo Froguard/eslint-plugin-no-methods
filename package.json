@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-methods",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Disallow using the some methods in your configuration",
   "keywords": [
     "eslint",
@@ -22,7 +22,7 @@
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "~3.9.1",
+    "eslint": ">=4.18.2",
     "json2md": "^1.6.1",
     "mocha": "^5.2.0"
   },
